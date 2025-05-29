@@ -134,3 +134,66 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment folders
+venv/
+env/
+.venv/
+
+# Python package info
+*.egg-info/
+dist/
+build/
+
+# Pip cache
+pip-wheel-metadata/
+*.whl
+
+# IPython / Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.tox/
+coverage.xml
+
+# Type checker / linters
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# PyInstaller
+*.spec
+
+# Trained models (common formats)
+*.h5
+*.hdf5
+*.pb
+*.pt
+*.pth
+*.joblib
+*.sav
+*.onnx
+*.tflite
+
+# Large datasets (optional if stored locally)
+data/
+datasets/
+
+# ML experiment logs (TensorBoard, etc.)
+runs/
+logs/
+
+# VSCode
+.vscode/
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
