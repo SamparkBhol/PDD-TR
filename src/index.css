@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White background */
+    --foreground: 224 71.4% 4.1%; /* Dark blue text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 217 91% 60%; /* Vibrant Blue */
+    --primary-foreground: 0 0% 98%; /* Almost white */
+
+    --secondary: 220 13% 91%; /* Light Gray */
+    --secondary-foreground: 224 71.4% 4.1%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 9% 46%; /* Medium Gray */
+
+    --accent: 217 91% 60%; /* Vibrant Blue for accents */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 85%; /* Lighter gray border */
+    --input: 220 13% 85%;
+    --ring: 217 91% 60%; /* Vibrant Blue for focus rings */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 0 0% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 13% 18%; /* Darker Gray */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 13% 18%;
+    --muted-foreground: 220 9% 55%; /* Lighter Gray for dark mode */
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 28%; /* Darker border */
+    --input: 220 13% 28%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Glassmorphism example for cards - can be applied selectively */
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+
+  /* Neumorphism example for buttons - can be applied selectively */
+  .neumorphic-button {
+    @apply shadow-[5px_5px_10px_#bcbcbc,-5px_-5px_10px_#ffffff] hover:shadow-[inset_5px_5px_10px_#bcbcbc,inset_-5px_-5px_10px_#ffffff];
+  }
+  .dark .neumorphic-button {
+    @apply shadow-[5px_5px_10px_#1a1a1a,-5px_-5px_10px_#2c2c2c] hover:shadow-[inset_5px_5px_10px_#1a1a1a,inset_-5px_-5px_10px_#2c2c2c];
+  }
+}
+
+/* For custom scrollbars to fit the Windows theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-secondary/50 rounded-md;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/70 rounded-md;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
+}
